@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background: #111;
+    overflow: hidden;
+}
+span{
+    position: absolute;
+    background: #FD2155;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    border-radius: 50%;
+}
+span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#05FDD8 ;
+    border-radius: 50%;
+    animation: moveParticules 2s linear infinite;
+}
+@keyframes moveParticules{
+    0%{
+        transform: translate(0px);
+    }
+    100%{
+        transform: translate(300px);
+    }
+}
